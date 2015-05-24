@@ -66,4 +66,4 @@ final_summary = aggregate(final_data[,names(final_data) != c('activity_id',
                           by=list(activity_id=final_data$activity_id,
                                   subject_id=final_data$subject_id),FUN=mean,na.action = na.omit)
 
-write.table(final_summary, file = "measurement_summary_activity_subject.txt")
+write.table(final_summary, file = "measurement_summary_activity_subject.txt",sep='\t')
